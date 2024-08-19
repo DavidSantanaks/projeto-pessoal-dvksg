@@ -15,11 +15,22 @@ function show(setDados) {
     const vendedor = setDados.getVendedor;
 
     const mostra = `bem vindo ${nome}, você sera atendido por ${vendedor} da empresa ${empresa}`
+
     document.getElementById("pdados").innerHTML = mostra;
 }
 
-function twofnc() {
-    setDados();
-    show(setDados());
+function selectTemplate() {
+
+    const dados = setDados();
+
+    const select = document.querySelector("#chose-template")
+    if (select.value == "Bem vindo") {
+        const show = `Ola ${dados.getNome} seja bem vindo, vocë sera atendido pela empresa ${dados.getEmpresa}`
+        document.getElementById("template-select").innerHTML = show;
+    }
+    if (select.value === "x") {
+        console.log("XXXXXXXX")
+    }
+
 }
 

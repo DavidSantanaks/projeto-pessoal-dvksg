@@ -4,28 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
-
-
 
 </head>
 
 <body>
-
 
     <form action="" class="pform">
         <div id="dforms">
             <input type="text" name="nome" id="nome" placeholder="nome">
             <input type="text" name="empresa" id="empresa" placeholder="empresa">
             <input type="text" name="vendedor" id="vendedor" placeholder="vendedor">
-            <button type="button" onclick="twofnc()">Enviar</button>
-
+            <button type="button" onclick="setDados()">Enviar</button>
             <br>
             <p id="pdados"></p>
         </div>
     </form>
+
+    <div class="text-template" id="text-template">
+        <label for="info-text-template">Escolha um template:</label>
+
+        <select name="chose-template" id="chose-template" onchange="selectTemplate()">
+            <option value="Bem vindo">Bem vindo fulano</option>
+            <option value="x">A empresa X </option>
+        </select>
+
+        <p id="template-select"></p>
+    </div>
+
 </body>
 
 </html>

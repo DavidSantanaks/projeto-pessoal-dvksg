@@ -34,3 +34,8 @@ function selectTemplate() {
 
 }
 
+function copy() {
+    var copyText = document.getElementById("template-select");
+    copyText.select();
+    navigator.clipboard.writeText(copyText.value)
+}

@@ -8,33 +8,47 @@
     align-items: center;
 }
 
+h1 {
 
+    font-family: Georgia, 'Times New Roman', Times, serif;
 
-p {
-    color: whitesmoke;
 }
 
 .input-area {
     display: flex;
     flex-direction: row;
-
+    align-items: center;
+    border-bottom: 0px;
 }
 
-.input-area #dforms {
+.input-area #div-forms {
     display: table-row;
     margin: 5px;
     right: 10px;
+    bottom: 0px;
 }
 
-.input-area #dforms input {
+
+.input-area #div-forms input {
+
     margin: 5px;
     right: 10px;
 }
 
-.input-area #dforms input::placeholder {
+.input-area #div-forms input::placeholder {
     text-align: center;
 }
 
+.input-area .btn-primary {
+    padding: 0px 20px 0px 20px;
+    align-items: end;
+}
+
+.input-area .div-botao {
+    display: flex;
+
+    justify-content: center;
+}
 
 .areaTemplate {
 
@@ -52,6 +66,7 @@ p {
 }
 
 
+
 .areaTemplate #chose-template,
 #template-select {
     margin: 4px;
@@ -59,9 +74,29 @@ p {
     border-color: black;
 }
 
-
-
 .areaTemplate.areaTemplate .bi-clipboard {
     margin-left: auto;
 
+}
+
+.areaTemplate .template-select {
+    background-color: rgb(232, 218, 218);
+    display: flex;
+    width: 600px;
+    height: 400px;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+    resize: horizontal;
+    box-sizing: border-box;
+    text-align: center;
+    resize: none;
+}
+
+.areaTemplate .template-select::placeholder {
+    text-align: center;
+}
+
+.areaTemplate .chose-template {
+    text-align: center;
 }

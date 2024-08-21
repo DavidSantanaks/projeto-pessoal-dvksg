@@ -26,13 +26,20 @@
 
     <div class="container-geral" id="container-geral">
 
+        <h1>Template comuns</h1>
         <div class="input-area">
             <form action="" class="pform">
-                <div id="dforms">
-                    <input type="text" name="nome" id="nome" placeholder="nome">
-                    <input type="text" name="empresa" id="empresa" placeholder="empresa">
-                    <input type="text" name="vendedor" id="vendedor" placeholder="vendedor">
-                    <button type="button" onclick="setDados()" class="btn btn-primary" id="btEnviar">Enviar</button>
+                <div id="div-forms">
+                    <input type="text" name="nome" id="nome" placeholder="nome" class="form-control form-control-sm">
+                    <input type="text" name="empresa" id="empresa" placeholder="empresa"
+                        class="form-control form-control-sm">
+                    <input type="text" name="vendedor" id="vendedor" placeholder="vendedor"
+                        class="form-control form-control-sm">
+                    <div class="div-botao">
+
+                        <button type="button" onclick="setDados()" class="btn btn-primary" id="btEnviar">Enviar</button>
+
+                    </div>
                     <br>
                     <p id="pdados"></p>
                 </div>
@@ -42,14 +49,18 @@
         <div id="areaTemplate" class="areaTemplate">
 
             <label for="info-text-template" class="label-template">Escolha um template:</label>
-            <select name="chose-template" id="chose-template" onchange="selectTemplate()">
+            <select name="chose-template" id="chose-template" class="chose-template" onchange="selectTemplate()">
                 <option value="" disabled selected></option>
-                <option value="Bem vindo">Bem-vindo</option>
-                <option value="Bem vindo">Bem-vindo</option>
+                <option value="Bem-vindo">Bem-vindo</option>
+                <option value="atendido-por">Atendimento</option>
+                <option value="editar">editar</option>
+                <option value="editar">editar</option>
+                <option value="editar">editar</option>
             </select>
 
 
-            <textarea name="" id="template-select" placeholder="Resultado template" readonly></textarea>
+            <textarea name="" class="template-select" id="template-select" placeholder="Resultado template"
+                readonly></textarea>
 
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-clipboard"
                 viewBox="0 0 16 16" onclick="copy()">

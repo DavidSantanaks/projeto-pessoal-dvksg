@@ -7,31 +7,25 @@ function setDados() {
     return { getNome, getEmpresa, getVendedor }
 }
 
-
-
-function show(setDados) {
-    const nome = setDados.getNome
-    const empresa = setDados.getEmpresa;
-    const vendedor = setDados.getVendedor;
-
-    const mostra = `bem vindo ${nome}, você sera atendido por ${vendedor} da empresa ${empresa}`
-
-    document.getElementById("pdados").innerHTML = mostra;
-}
-
 function selectTemplate() {
 
     const dados = setDados();
 
     const select = document.querySelector("#chose-template")
-    if (select.value == "Bem vindo") {
-        const show = `Ola ${dados.getNome} seja bem vindo, vocë sera atendido pela empresa ${dados.getEmpresa}`
+    if (select.value === "Bem-vindo") {
+        const show = `Ola ${dados.getNome} seja bem vindo`
         document.getElementById("template-select").innerHTML = show;
     }
-    if (select.value === "x") {
-        console.log("XXXXXXXX")
+
+    if (select.value === "atendido-por") {
+        const show = `${dados.getNome} voce sera atendido por o vendedor: ${dados.getVendedor}`
+        document.getElementById("template-select").innerHTML = show;
     }
 
+    if (select.value === "editar") {
+        const show = `editar editar JS`
+        document.getElementById("template-select").innerHTML = show;
+    }
 }
 
 function copy() {

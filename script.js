@@ -39,3 +39,16 @@ function copy() {
     copyText.select();
     navigator.clipboard.writeText(copyText.value)
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Seleciona o botão e o campo escondido
+    const toggleButton = document.getElementById('btEnviar');
+    const textArea = document.getElementById('areaTemplate');
+
+    toggleButton.addEventListener('click', function () {
+        textArea.style.display = 'flex'
+    })
+
+}
+);
+

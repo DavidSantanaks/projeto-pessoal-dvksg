@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Copy template</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -24,39 +24,45 @@
 
 <body>
 
+    <div class="container-geral" id="container-geral">
 
-    <form action="" class="pform">
-        <div id="dforms">
-            <input type="text" name="nome" id="nome" placeholder="nome">
-            <input type="text" name="empresa" id="empresa" placeholder="empresa">
-            <input type="text" name="vendedor" id="vendedor" placeholder="vendedor">
-            <button type="button" onclick="setDados()" class="btn btn-primary">Enviar</button>
-            <br>
-            <p id="pdados"></p>
+        <div class="input-area">
+            <form action="" class="pform">
+                <div id="dforms">
+                    <input type="text" name="nome" id="nome" placeholder="nome">
+                    <input type="text" name="empresa" id="empresa" placeholder="empresa">
+                    <input type="text" name="vendedor" id="vendedor" placeholder="vendedor">
+                    <button type="button" onclick="setDados()" class="btn btn-primary" id="btEnviar">Enviar</button>
+                    <br>
+                    <p id="pdados"></p>
+                </div>
+            </form>
         </div>
-    </form>
 
-    <div class="text-template" id="text-template">
-        <label for="info-text-template">Escolha um template:</label>
+        <div id="areaTemplate" class="areaTemplate">
 
-        <select name="chose-template" id="chose-template" onchange="selectTemplate()">
-            <option value="" disabled selected></option>
-            <option value="Bem vindo">Bem-vindo</option>
-            <option value="Bem vindo">Bem-vindo</option>
-        </select>
+            <label for="info-text-template" class="label-template">Escolha um template:</label>
+            <select name="chose-template" id="chose-template" onchange="selectTemplate()">
+                <option value="" disabled selected></option>
+                <option value="Bem vindo">Bem-vindo</option>
+                <option value="Bem vindo">Bem-vindo</option>
+            </select>
 
-        <div id="copy-area">
-            <textarea name="" id="template-select"></textarea>
-            <button onclick="copy()" class="bi bi-clipboard">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-clipboard" viewBox="0 0 16 16">
-                    <path
-                        d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z" />
-                    <path
-                        d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z" />
-                </svg>
-            </button>
+
+            <textarea name="" id="template-select" placeholder="Resultado template" readonly></textarea>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-clipboard"
+                viewBox="0 0 16 16" onclick="copy()">
+                <path
+                    d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z" />
+                <path
+                    d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z" />
+            </svg>
+
+
         </div>
+
+
     </div>
 
 </body>

@@ -1,11 +1,67 @@
-.pform {
-    background-color: 0;
+.container-geral {
+    width: 100vw;
+    height: 100vh;
+    background: #6C7A89;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-body {
-    background-color: darkgrey;
-}
+
 
 p {
     color: whitesmoke;
+}
+
+.input-area {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.input-area #dforms {
+    display: table-row;
+    margin: 5px;
+    right: 10px;
+}
+
+.input-area #dforms input {
+    margin: 5px;
+    right: 10px;
+}
+
+.input-area #dforms input::placeholder {
+    text-align: center;
+}
+
+
+.areaTemplate {
+
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    border-color: black;
+}
+
+.areaTemplate .label-template {
+    margin-top: 2px;
+    text-align: center;
+
+
+}
+
+
+.areaTemplate #chose-template,
+#template-select {
+    margin: 4px;
+    border-radius: 2px;
+    border-color: black;
+}
+
+
+
+.areaTemplate.areaTemplate .bi-clipboard {
+    margin-left: auto;
+
 }
